@@ -7,7 +7,7 @@
 using namespace std;
 
 
-class Library:public User
+class Library:public User , Book
 {
     private:
         void signIn()
@@ -20,12 +20,13 @@ class Library:public User
             cin>>password;
             if(checkUser(userName , password)==0)
             {
-                cout<<"not correct ; try again!";
+                cout<<"not correct ;\n try again!\n";
                 signIn();
             }
             else
             {
-                cout<<"welcome!";
+                cout<<"welcome!\n";
+                firstStep();
             } 
     
         }
@@ -46,7 +47,7 @@ class Library:public User
             cin>>lastName;
             cout<<"Birth Date:\n";
             cin>>birthDate;
-            // signUpForm(userName,password,firstName,lastName ,birthDate);
+            signUpForm(userName,password,firstName,lastName ,birthDate);
            
 
         };
