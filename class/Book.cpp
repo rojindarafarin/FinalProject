@@ -38,7 +38,6 @@ class Book:public User
             }
         
         }
-     
         void searchBook()
         {
             cout<<"choise way of search:\n"<<
@@ -81,25 +80,21 @@ class Book:public User
                         res=1;
                         int i = 5;
                 }
-
-
             }
             int a;
             if(res==1)
-            {   cout<<"FIND";
+            {   cout<<"FIND! \n";
                 showBook(f , i);
 
                 
             }
             else
-                cout<<"NOT FOUND!";
+                cout<<"NOT FOUND! \n";
                 searchBook();
 
             myBooks.close();
             
         }
-
-
         void showBook(string f , int i)
         {
             string title ;
@@ -118,9 +113,9 @@ class Book:public User
                     if(Book[10]=="0")
                     {
                         cout<<"Book is available! \n"<<
-                        "Title:     "<<Book[0]<<"\n shelfNumber :       "<<Book[1];
+                        "Title:     "<<Book[0]<<"\n shelfNumber :   "<<Book[1];
                         int res =1;
-                        cout<<"1-bring the book \n\n 2-quit \n\n";
+                        cout<<"\n 1-bring the book \n2-quit \n";
                         title = Book[0];
                         cin>>btn;
                     }
@@ -133,7 +128,7 @@ class Book:public User
 
             }
             if(btn==1){
-                cout<<"please enter your useer name again !! \n\n";
+                cout<<"please enter your user name again !! \n";
                 cin>>userName;
                 string book;
                 vector<string> Book;
@@ -216,13 +211,9 @@ class Book:public User
             }
             out.close();
             in.close();
-            cout<<"SignUp seccussfully!!!! \n\n";
+            cout<<"seccussfully!!!! \n\n";
         
         };
-    
-
-
-
         void giveBack()
         {
             cout<<"please enter your username again? \n";
@@ -251,14 +242,14 @@ class Book:public User
                     title3 = User[7];
                     if(title1 =="0" && title2 == "0" && title3=="0")
                     {
-                        cout<<"you have not already any books \n";
+                        cout<<"you have not any books \n";
                         firstStep();
 
                     }
                     
                     else
                     {
-                        cout<<"give back your books?\n"<<
+                        cout<<"Are sure to give back your books?\n"<<
                         "1.YES\n"<<
                         "2.NO\n";
                         int Button;
@@ -334,16 +325,8 @@ class Book:public User
 
                         }
                     }
-                        
-                        
-                
-
-
 
             }
             }
-            
-    
-           
         };
 };

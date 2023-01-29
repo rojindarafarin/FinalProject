@@ -30,7 +30,7 @@ class Library: public Book
             else
             {
                 Library();
-                cout<<"Try again!";
+                cout<<"Try again! \n";
             }
                 
         };
