@@ -2,44 +2,33 @@
 #include <string>
 #include <fstream> 
 #include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 class User
 {
     public:
-        void signUpForm
-        (
-            string userName,
-            string password,
-            string firstName,
-            string lastName ,
-            string birthDate
-        )
-        {
-        ofstream myFile;
-        myFile.open("./txt/users.txt");
+        
+    vector<string> split(string str)
+    {
 
-        myFile<<userName+password<<"\n"<<
-        firstName<<"\n"<<
-        lastName<<"\n"<<
-        birthDate<<"\n";
-        myFile.close();
-        };
-        bool checkUser(string userName , string password)
-        {
-            ifstream myFile;
-            string chk = userName + password;
-            myFile.open("./txt/users.txt");
-            string line ;
-            while (getline(myFile , line))
+        vector<string> usr;
+	    string word = "";
+	    for (auto x : str)
+	    {
+		    if (x == ',')
+		    {
+                usr.push_back(word);
+			    word = "";
+		    }
+		    else 
             {
-                if(line == chk)
-                {
-                    myFile.close();
-                    return 1;
-                }
+			    word = word + x;
+		    }
+	    }
+	    usr.push_back(word);
+        return usr;
+    };
+    
 
-            }
-            myFile.close();
-            return 0;
-        }
+        
 };
